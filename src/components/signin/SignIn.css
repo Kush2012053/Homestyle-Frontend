@@ -1,0 +1,158 @@
+.signInMainDiv {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+.signInSubDiv1 {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+}
+.signInTop {
+  height: 80px;
+  width: 100%;
+  padding-left: 20px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+.signInLogo {
+  height: 30px;
+  width: 150px;
+  font-size: 0px;
+}
+.signInMiddle {
+  height: calc(100vh - 130px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signInHeading {
+  padding-bottom: 40px;
+  color: #ffafaf;
+}
+.signInInputFields {
+  padding: 10px 20px;
+  border: 2px solid #c6c6c6;
+  border-radius: 10px;
+  width: 240px;
+  outline: none;
+  font-size: 16px;
+}
+::placeholder {
+  color: #c6c6c6;
+}
+.signInSubmit {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background-color: #ffafaf;
+  font-size: 16px;
+}
+
+.signInSubmit:hover {
+  cursor: pointer;
+}
+.signInNewOuter {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0px;
+}
+.signInNewCorner {
+  width: 80px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+.signInNewLine {
+  width: 100%;
+  border-top: 2px solid black;
+}
+.signInNew {
+  height: 40px;
+  width: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signInAccountOuter {
+  display: flex;
+  justify-content: center;
+}
+.signInAccountOuter:hover {
+  cursor: pointer;
+}
+.signInAccountInner {
+  border: 2px solid black;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+.signInBottom {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+.signInPara {
+  font-size: 9px;
+}
+.signInHrOuter {
+  display: flex;
+  justify-content: center;
+}
+.signInHrInner {
+  border-top: 1px solid #ffafaf;
+  width: 80px;
+}
+.signInSubDiv2 {
+  width: 50%;
+  height: 100%;
+  font-size: 0px;
+}
+@media screen and (max-width: 768px) {
+  .signInSubDiv2 {
+    display: none;
+  }
+  .signInSubDiv1 {
+    width: 100%;
+  }
+  .signInHeading {
+    font-size: 28px;
+  }
+  .signInInputFields {
+    font-size: 14px;
+  }
+  .signInSubmit {
+    font-size: 14px;
+  }
+  .signInNewHeading {
+    font-size: 14px;
+  }
+  .signInAccountInner {
+    font-size: 14px;
+  }
+  .signInTop {
+    padding-left: 60px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .signInHeading {
+    font-size: 24px;
+  }
+  .signInInputFields {
+    font-size: 12px;
+  }
+  .signInSubmit {
+    font-size: 12px;
+  }
+  .signInNewHeading {
+    font-size: 12px;
+  }
+  .signInAccountInner {
+    font-size: 12px;
+  }
+  .signInNew {
+    width: 150px;
+  }
+}

@@ -1,0 +1,370 @@
+.confirmOrderMainDiv {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  padding: 60px 0px;
+  box-sizing: border-box;
+}
+.confirmOrderLeftDiv {
+  width: 60%;
+  height: 100%;
+  border-right: 1px solid #cccccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+.confirmOrderLeft {
+  width: 500px;
+}
+.confirmOrderRightDiv {
+  width: 40%;
+  height: 100%;
+  border-left: 1px solid #cccccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+.confirmOrderRight {
+  width: 300px;
+}
+.confirmOrderSummary {
+  text-align: center;
+  font-size: 32px;
+  padding-bottom: 30px;
+}
+.confirmOrderOuter {
+  width: 100%;
+  display: flex;
+  padding-bottom: 20px;
+}
+.confirmOrderInnerLeft {
+  width: 70%;
+}
+.confirmOrderInnerRight {
+  width: 30%;
+  text-align: right;
+}
+.confirmOrderButton {
+  width: 100%;
+  padding: 12px 0px;
+  text-align: center;
+  background-color: #ffc6c6;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+}
+.confirmOrderDiv {
+  border: 1px solid #cccccc;
+  margin-bottom: 20px;
+}
+.confirmOrderPara {
+  font-size: 16px;
+}
+.confirmOrderParaCart {
+  font-size: 16px;
+}
+
+.confirmOrderInfo {
+  font-size: 32px;
+  padding-bottom: 30px;
+}
+.confirmOrderLarge {
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+.confirmOrderSmall {
+  font-weight: 100;
+}
+.confirmOrderCart {
+  padding: 20px 0px 30px;
+  font-size: 32px;
+}
+.confirmOrderEachCart {
+  padding-bottom: 10px;
+  width: 100%;
+  height: 60px;
+  display: flex;
+}
+.confirmOrderEachLeft {
+  font-size: 0px;
+  width: 60px;
+  height: 100%;
+}
+.confirmOrderEachRight1 {
+  width: 210px;
+  height: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 10px;
+}
+.confirmOrderEachRight2 {
+  height: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 216px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+.confirmOrderCartItems {
+  height: 210px;
+  overflow: auto;
+}
+
+.confirmOrderOuterDiv {
+  width: 100%;
+  height: 80px;
+  padding-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+.confirmOrderInnerDiv {
+  display: flex;
+  height: 100%;
+  width: 650px;
+}
+.confirmOrderIcon {
+  width: 150px;
+  height: 100%;
+}
+.confirmOrderLine {
+  width: 100px;
+  height: 100%;
+}
+.confirmOrderCommon {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+.confirmOrderCommonUpper {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+}
+.confirmOrderCommon1 {
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid black;
+  box-sizing: border-box;
+}
+.confirmOrderCommon2 {
+  width: 100%;
+  height: 30px;
+  border-top: 1px solid black;
+  box-sizing: border-box;
+}
+.confirmOrderBorderColor {
+  border-color: #ffc6c6;
+}
+.confirmOrderHeadline {
+  font-size: 14px;
+}
+.confirmOrderColor {
+  color: #ffc6c6;
+}
+
+@media screen and (max-width: 992px) {
+  .confirmOrderLeft {
+    width: 420px;
+  }
+  .confirmOrderRight {
+    width: 250px;
+  }
+  .confirmOrderSummary {
+    padding-bottom: 26px;
+  }
+  .confirmOrderOuter {
+    padding-bottom: 16px;
+  }
+
+  .confirmOrderHr {
+    margin-bottom: 16px;
+  }
+
+  .confirmOrderInfo {
+    padding-bottom: 26px;
+  }
+  .confirmOrderLarge {
+    padding-bottom: 8px;
+  }
+  .confirmOrderCart {
+    padding: 18px 0px 26px;
+  }
+
+  .confirmOrderEachCart {
+    height: 50px;
+  }
+  .confirmOrderEachLeft {
+    width: 50px;
+  }
+  .confirmOrderEachRight1 {
+    width: 175px;
+  }
+  .confirmOrderEachRight2 {
+    width: 181px;
+  }
+  .confirmOrderCartItems {
+    height: 180px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .confirmOrderLeft {
+    width: 500px;
+  }
+  .confirmOrderRight {
+    width: 500px;
+  }
+  .confirmOrderSummary {
+    font-size: 28px;
+    padding-bottom: 20px;
+    text-align: left;
+  }
+  .confirmOrderOuter {
+    padding-bottom: 14px;
+  }
+  .confirmOrderButton {
+    font-size: 14px;
+    width: 284px;
+  }
+  .confirmOrderButtonDiv {
+    display: flex;
+    justify-content: center;
+  }
+  .confirmOrderHr {
+    margin-bottom: 14px;
+  }
+  .confirmOrderPara {
+    font-size: 14px;
+  }
+  .confirmOrderParaCart {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .confirmOrderInfo {
+    font-size: 28px;
+    padding-bottom: 20px;
+  }
+  .confirmOrderLarge {
+    font-size: 14px;
+    padding-bottom: 6px;
+  }
+  .confirmOrderCart {
+    padding: 14px 0px 20px;
+    font-size: 28px;
+  }
+
+  .confirmOrderEachCart {
+    height: 40px;
+  }
+  .confirmOrderEachLeft {
+    width: 40px;
+  }
+  .confirmOrderEachRight1 {
+    width: 220px;
+  }
+  .confirmOrderEachRight2 {
+    width: 230px;
+    padding: 0px;
+    text-align: right;
+  }
+  .confirmOrderCartItems {
+    height: 150px;
+  }
+
+  .confirmOrderInnerDiv {
+    width: 410px;
+  }
+  .confirmOrderLine {
+    width: 40px;
+  }
+  .confirmOrderIcon {
+    width: 110px;
+  }
+  .confirmOrderHeadline {
+    font-size: 12px;
+  }
+
+  .confirmOrderMainDiv {
+    height: auto;
+    display: block;
+    padding: 40px 0px;
+  }
+  .confirmOrderLeftDiv {
+    width: 100%;
+    height: auto;
+    border: none;
+    padding-bottom: 40px;
+  }
+  .confirmOrderCartItems {
+    height: auto;
+  }
+  .confirmOrderRightDiv {
+    width: 100%;
+    height: auto;
+    border: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .confirmOrderInnerDiv {
+    width: 330px;
+  }
+  .confirmOrderLine {
+    width: 30px;
+  }
+  .confirmOrderIcon {
+    width: 90px;
+  }
+  .confirmOrderLeft {
+    width: 340px;
+  }
+  .confirmOrderRight {
+    width: 340px;
+  }
+  .confirmOrderSummary {
+    font-size: 24px;
+  }
+
+  .confirmOrderButton {
+    font-size: 12px;
+  }
+
+  .confirmOrderPara {
+    font-size: 12px;
+  }
+  .confirmOrderParaCart {
+    font-size: 12px;
+  }
+  .confirmOrderInfo {
+    font-size: 24px;
+  }
+  .confirmOrderLarge {
+    font-size: 12px;
+  }
+  .confirmOrderCart {
+    font-size: 24px;
+  }
+  .confirmOrderEachCart {
+    height: 40px;
+  }
+  .confirmOrderEachLeft {
+    width: 40px;
+  }
+  .confirmOrderEachRight1 {
+    width: 140px;
+  }
+  .confirmOrderEachRight2 {
+    width: 150px;
+  }
+  .confirmOrderHeadline {
+    font-size: 10px;
+  }
+}

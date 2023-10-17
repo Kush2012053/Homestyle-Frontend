@@ -1,0 +1,93 @@
+.signUpMainDiv {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+.signUpSubDiv1 {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+}
+.signInTop {
+  height: 80px;
+  width: 100%;
+  padding-left: 20px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+.signInLogo {
+  height: 30px;
+  width: 150px;
+  font-size: 0px;
+}
+
+.signUpBottom {
+  display: flex;
+  height: calc(100vh - 80px);
+  justify-content: center;
+  align-items: center;
+}
+.signUpHeading {
+  color: #ffafaf;
+  padding-bottom: 40px;
+}
+.signUpInputFields {
+  padding: 10px 20px;
+  border: 2px solid #c6c6c6;
+  border-radius: 10px;
+  width: 240px;
+  outline: none;
+  font-size: 16px;
+}
+::placeholder {
+  color: #c6c6c6;
+}
+.signUpSubmit {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  border: 2px solid #ffafaf;
+  color: white;
+  font-size: 16px;
+  background-color: #ffafaf;
+}
+.signUpSubmit:hover {
+  cursor: pointer;
+}
+.signUpSubDiv2 {
+  width: 50%;
+  height: 100%;
+  font-size: 0px;
+}
+@media screen and (max-width: 768px) {
+  .signUpSubDiv2 {
+    display: none;
+  }
+  .signUpSubDiv1 {
+    width: 100%;
+  }
+  .signUpHeading {
+    font-size: 28px;
+  }
+  .signUpInputFields {
+    font-size: 14px;
+  }
+  .signUpSubmit {
+    font-size: 14px;
+  }
+  .signInTop {
+    padding-left: 60px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .signUpInputFields {
+    font-size: 12px;
+  }
+  .signUpHeading {
+    font-size: 24px;
+  }
+  .signUpSubmit {
+    font-size: 12px;
+  }
+}

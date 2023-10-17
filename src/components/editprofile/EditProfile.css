@@ -1,0 +1,68 @@
+.editProfileOuterDiv {
+  height: 100vh;
+  padding-top: 80px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.editProfileInnerDiv {
+  width: 520px;
+}
+.editProfileHeading {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.editProfileForm {
+  display: flex;
+  justify-content: center;
+}
+.editProfileInputFields {
+  padding: 10px 20px;
+  border: 2px solid #c6c6c6;
+  border-radius: 10px;
+  width: 240px;
+  outline: none;
+  font-size: 16px;
+}
+::placeholder {
+  color: #c6c6c6;
+}
+.editProfileSubmit {
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background-color: #ffafaf;
+  width: 284px;
+  padding: 12px 0px;
+  font-size: 16px;
+}
+.editProfileSubmit:hover {
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .editProfileInnerDiv {
+    width: 330px;
+  }
+  .editProfileHeading {
+    font-size: 28px;
+  }
+  .editProfileInputFields {
+    font-size: 14px;
+  }
+  .editProfileSubmit {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .editProfileHeading {
+    font-size: 24px;
+  }
+  .editProfileInputFields {
+    font-size: 12px;
+  }
+  .editProfileSubmit {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,292 @@
+.oneOrderMainDiv {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  padding: 20px 0px 60px;
+  box-sizing: border-box;
+}
+.oneOrderLeftDiv {
+  width: 60%;
+  height: 100%;
+  border-right: 1px solid #cccccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+.oneOrderLeft {
+  width: 500px;
+}
+.oneOrderRightDiv {
+  width: 40%;
+  height: 100%;
+  border-left: 1px solid #cccccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+.oneOrderRight {
+  width: 300px;
+}
+.oneOrderSummary {
+  text-align: center;
+  font-size: 32px;
+  padding-bottom: 30px;
+}
+.oneOrderOuter {
+  width: 100%;
+  display: flex;
+  padding-bottom: 20px;
+}
+.oneOrderInnerLeft {
+  width: 70%;
+}
+.oneOrderInnerRight {
+  width: 30%;
+  text-align: right;
+}
+
+.oneOrderDiv {
+  border: 1px solid #cccccc;
+  margin-bottom: 20px;
+}
+.oneOrderPara {
+  font-size: 16px;
+}
+.oneOrderParaCart {
+  font-size: 16px;
+}
+
+.oneOrderInfo {
+  font-size: 32px;
+  padding-bottom: 30px;
+}
+.oneOrderLarge {
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+.oneOrderSmall {
+  font-weight: 100;
+}
+.oneOrderCart {
+  padding: 20px 0px 30px;
+  font-size: 32px;
+}
+.oneOrderEachCart {
+  padding-bottom: 10px;
+  width: 100%;
+  height: 60px;
+  display: flex;
+}
+.oneOrderEachLeft {
+  font-size: 0px;
+  width: 60px;
+  height: 100%;
+}
+.oneOrderEachRight1 {
+  width: 210px;
+  height: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 10px;
+}
+.oneOrderEachRight2 {
+  height: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 216px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+.oneOrderCartItems {
+  height: 210px;
+  overflow: auto;
+}
+
+.oneOrderIdOuterDiv {
+  padding-top: 140px;
+  width: calc(60% - 1px);
+  display: flex;
+  justify-content: center;
+}
+.oneOrderIdInnerDiv {
+  width: 500px;
+}
+@media screen and (max-width: 992px) {
+  .oneOrderLeft {
+    width: 420px;
+  }
+  .oneOrderRight {
+    width: 250px;
+  }
+  .oneOrderSummary {
+    padding-bottom: 26px;
+  }
+  .oneOrderOuter {
+    padding-bottom: 16px;
+  }
+
+  .oneOrderHr {
+    margin-bottom: 16px;
+  }
+
+  .oneOrderInfo {
+    padding-bottom: 26px;
+  }
+  .oneOrderLarge {
+    padding-bottom: 8px;
+  }
+  .oneOrderCart {
+    padding: 18px 0px 26px;
+  }
+
+  .oneOrderEachCart {
+    height: 50px;
+  }
+  .oneOrderEachLeft {
+    width: 50px;
+  }
+  .oneOrderEachRight1 {
+    width: 175px;
+  }
+  .oneOrderEachRight2 {
+    width: 181px;
+  }
+  .oneOrderCartItems {
+    height: 180px;
+  }
+  .oneOrderIdInnerDiv {
+    width: 420px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .oneOrderLeft {
+    width: 500px;
+  }
+  .oneOrderRight {
+    width: 500px;
+  }
+  .oneOrderSummary {
+    font-size: 28px;
+    padding-bottom: 20px;
+    text-align: left;
+  }
+  .oneOrderOuter {
+    padding-bottom: 14px;
+  }
+
+  .oneOrderHr {
+    margin-bottom: 14px;
+  }
+  .oneOrderPara {
+    font-size: 14px;
+  }
+  .oneOrderParaCart {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .oneOrderInfo {
+    font-size: 28px;
+    padding-bottom: 20px;
+  }
+  .oneOrderLarge {
+    font-size: 14px;
+    padding-bottom: 6px;
+  }
+  .oneOrderCart {
+    padding: 14px 0px 20px;
+    font-size: 28px;
+  }
+
+  .oneOrderEachCart {
+    height: 40px;
+  }
+  .oneOrderEachLeft {
+    width: 40px;
+  }
+  .oneOrderEachRight1 {
+    width: 220px;
+  }
+  .oneOrderEachRight2 {
+    width: 230px;
+    padding: 0px;
+    text-align: right;
+  }
+  .oneOrderCartItems {
+    height: 150px;
+  }
+
+  .oneOrderMainDiv {
+    height: auto;
+    display: block;
+    padding: 20px 0px 40px;
+  }
+  .oneOrderLeftDiv {
+    width: 100%;
+    height: auto;
+    border: none;
+    padding-bottom: 40px;
+  }
+  .oneOrderCartItems {
+    height: auto;
+  }
+  .oneOrderRightDiv {
+    width: 100%;
+    height: auto;
+    border: none;
+  }
+  .oneOrderIdOuterDiv {
+    width: 100%;
+    padding-top: 120px;
+  }
+  .oneOrderIdInnerDiv {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .oneOrderLeft {
+    width: 340px;
+  }
+  .oneOrderRight {
+    width: 340px;
+  }
+  .oneOrderSummary {
+    font-size: 24px;
+  }
+
+  .oneOrderPara {
+    font-size: 12px;
+  }
+  .oneOrderParaCart {
+    font-size: 12px;
+  }
+  .oneOrderInfo {
+    font-size: 24px;
+  }
+  .oneOrderLarge {
+    font-size: 12px;
+  }
+  .oneOrderCart {
+    font-size: 24px;
+  }
+  .oneOrderEachCart {
+    height: 40px;
+  }
+  .oneOrderEachLeft {
+    width: 40px;
+  }
+  .oneOrderEachRight1 {
+    width: 140px;
+  }
+  .oneOrderEachRight2 {
+    width: 150px;
+  }
+  .oneOrderIdInnerDiv {
+    width: 340px;
+  }
+}

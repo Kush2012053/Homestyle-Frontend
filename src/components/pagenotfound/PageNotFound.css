@@ -1,0 +1,64 @@
+.pageNotFoundOuterDiv {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pageNotFoundInnerDiv {
+  width: 500px;
+  text-align: center;
+}
+.pageNotFoundHeading {
+  color: #ffafaf;
+  font-size: 96px;
+}
+.pageNotFoundPara {
+  padding: 20px 0px;
+}
+
+.pageNotFoundButtonDiv {
+  display: flex;
+  justify-content: center;
+}
+.pageNotFoundButton {
+  padding: 12px 22px;
+  border-radius: 10px;
+  background-color: #ffafaf;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+@media screen and (max-width: 768px) {
+  .pageNotFoundHeading {
+    font-size: 84px;
+  }
+  .pageNotFoundPara {
+    font-size: 14px;
+  }
+  .pageNotFoundH1 {
+    font-size: 28px;
+  }
+  .pageNotFoundButton {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .pageNotFoundHeading {
+    font-size: 72px;
+  }
+  .pageNotFoundPara {
+    font-size: 12px;
+  }
+  .pageNotFoundH1 {
+    font-size: 24px;
+  }
+  .pageNotFoundButton {
+    font-size: 12px;
+  }
+  .pageNotFoundInnerDiv {
+    width: 350px;
+  }
+}

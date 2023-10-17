@@ -1,0 +1,137 @@
+.myProfileMainDiv {
+  padding: 130px 80px 50px;
+  height: 100vh;
+  box-sizing: border-box;
+  width: 100%;
+}
+.myProfileTop {
+  width: 100%;
+  height: 120px;
+  background-color: #ffc6c6;
+  display: flex;
+  border-radius: 10px;
+}
+.myProfileInnerLeft {
+  width: calc(100% - 300px);
+  padding: 10px 10px 10px 20px;
+  color: white;
+  box-sizing: border-box;
+}
+.myProfileInnerRight {
+  width: 150px;
+  padding: 10px 0px;
+  display: flex;
+  justify-content: center;
+}
+.myProfileButton {
+  background-color: rgba(255, 255, 255, 30%);
+  padding: 12px 22px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.myProfileBottom {
+  display: flex;
+  justify-content: center;
+}
+.myProfileBox {
+  padding: 20px 20px 80px;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 2px 2px 6px 2px #cccccc;
+  position: relative;
+  top: -40px;
+  background-color: white;
+}
+.myProfileEdit {
+  display: flex;
+  justify-content: right;
+  padding-bottom: 20px;
+}
+.myProfileIcon {
+  cursor: pointer;
+}
+.myProfile {
+  border: 2px solid #cccccc;
+  border-radius: 10px;
+  padding: 10px;
+}
+.myProfilePara1 {
+  padding-bottom: 10px;
+}
+
+.myProfileHeading {
+  font-size: 32px;
+}
+.myProfileH4 {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .myProfileMainDiv {
+    padding: 130px 40px 50px;
+  }
+  .myProfileBox {
+    padding: 20px 20px 40px;
+    width: 340px;
+  }
+  .myProfileHeading {
+    font-size: 28px;
+  }
+  .myProfileButton {
+    font-size: 14px;
+    padding: 6px 11px;
+  }
+  .myProfileInnerLeft {
+    width: calc(100% - 220px);
+  }
+  .myProfileInnerRight {
+    width: 110px;
+  }
+  .myProfileH4 {
+    font-size: 14px;
+  }
+  .myProfilePara1 {
+    font-size: 14px;
+  }
+  .myProfilePara2 {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .myProfileMainDiv {
+    padding: 130px 10px 50px;
+  }
+  .myProfileBox {
+    padding: 14px 14px 28px;
+    width: 270px;
+  }
+  .myProfileEdit {
+    padding-bottom: 14px;
+  }
+
+  .myProfilePara1 {
+    padding-bottom: 8px;
+    font-size: 12px;
+  }
+  .myProfileInnerLeft {
+    width: calc(100% - 180px);
+  }
+  .myProfileInnerRight {
+    width: 90px;
+  }
+  .myProfileHeading {
+    font-size: 24px;
+  }
+  .myProfileButton {
+    font-size: 12px;
+  }
+  .myProfileH4 {
+    font-size: 12px;
+  }
+  .myProfilePara2 {
+    font-size: 12px;
+  }
+}

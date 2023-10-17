@@ -1,0 +1,137 @@
+.myOrdersEmptyDiv {
+  width: 100%;
+  height: 100vh;
+  padding-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 40px;
+  box-sizing: border-box;
+}
+.myOrdersEmptyHeading {
+  text-align: center;
+}
+.myOrdersOuterDiv {
+  height: 100vh;
+  padding: 120px 80px 40px;
+  box-sizing: border-box;
+}
+.myOrdersHeading {
+  text-align: center;
+  padding-bottom: 10px;
+}
+.myOrdersPara {
+  text-align: center;
+  padding-bottom: 30px;
+}
+.myOrdersMainDiv {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  background-color: #ffafaf;
+  color: white;
+  padding-right: 4px;
+  box-sizing: border-box;
+}
+.myOrdersMainBottomDiv {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  border-bottom: 2px solid #ffafaf;
+  border-left: 2px solid #ffafaf;
+  border-right: 2px solid #ffafaf;
+  box-sizing: border-box;
+}
+.myOrdersInnerDiv {
+  overflow: auto;
+  height: 300px;
+}
+.myOrdersDiv1 {
+  width: calc(100% - 500px);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+.myOrdersDiv2 {
+  width: 200px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.myOrdersDiv3 {
+  width: 100px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.myOrdersIcon {
+  cursor: pointer;
+}
+@media screen and (max-width: 992px) {
+  .myOrdersDiv1 {
+    width: calc(100% - 290px);
+  }
+  .myOrdersDiv2 {
+    width: 120px;
+  }
+  .myOrdersDiv3 {
+    width: 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .myOrdersOuterDiv {
+    padding: 120px 40px 40px;
+  }
+  .myOrdersPara {
+    font-size: 14px;
+  }
+  .myOrdersDiv1 {
+    font-size: 14px;
+  }
+  .myOrdersDiv2 {
+    font-size: 14px;
+  }
+  .myOrdersDiv3 {
+    font-size: 14px;
+  }
+  .myOrdersEmptyHeading {
+    font-size: 28px;
+  }
+  .myOrdersHeading {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .myOrdersEmptyHeading {
+    font-size: 24px;
+  }
+  .myOrdersOuterDiv {
+    padding: 120px 10px 40px;
+    height: auto;
+  }
+  .myOrdersDiv1 {
+    width: calc(100% - 160px);
+    padding-left: 10px;
+    font-size: 12px;
+  }
+  .myOrdersDiv2 {
+    width: 60px;
+    font-size: 12px;
+  }
+  .myOrdersDiv3 {
+    width: 40px;
+    font-size: 12px;
+  }
+  .myOrdersInnerDiv {
+    min-height: 300px;
+    height: auto;
+  }
+  .myOrdersHeading {
+    font-size: 24px;
+  }
+  .myOrdersPara {
+    font-size: 12px;
+  }
+}

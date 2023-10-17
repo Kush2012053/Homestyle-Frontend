@@ -1,0 +1,135 @@
+.shippingDetailsDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0px;
+}
+.shippingDetailsHeading {
+  text-align: center;
+}
+.shippingDetailsInputFields {
+  padding: 10px 20px;
+  border: 2px solid #cccccc;
+  border-radius: 10px;
+  width: 240px;
+  outline: none;
+  font-size: 16px;
+}
+::placeholder {
+  color: #cccccc;
+}
+.shippingDetailsSubmit {
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background-color: #ffc6c6;
+  width: 284px;
+  padding: 12px 0px;
+  font-size: 16px;
+}
+.shippingDetailsSubmit:hover {
+  cursor: pointer;
+}
+
+.shippingDetailsOuterDiv {
+  width: 100%;
+  height: 80px;
+  padding-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+.shippingDetailsInnerDiv {
+  display: flex;
+  height: 100%;
+  width: 650px;
+}
+.shippingDetailsIcon {
+  width: 150px;
+  height: 100%;
+}
+.shippingDetailsLine {
+  width: 100px;
+  height: 100%;
+}
+.shippingDetailsCommon {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+.shippingDetailsCommonUpper {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+}
+.shippingDetailsCommon1 {
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid black;
+  box-sizing: border-box;
+}
+.shippingDetailsCommon2 {
+  width: 100%;
+  height: 30px;
+  border-top: 1px solid black;
+  box-sizing: border-box;
+}
+.shippingDetailsHeadline {
+  font-size: 14px;
+}
+.shippingDetailsColor {
+  color: #ffc6c6;
+}
+@media screen and (max-width: 768px) {
+  .shippingDetailsInnerDiv {
+    width: 410px;
+  }
+  .shippingDetailsLine {
+    width: 40px;
+  }
+  .shippingDetailsIcon {
+    width: 110px;
+  }
+  .shippingDetailsHeadline {
+    font-size: 12px;
+  }
+  .shippingDetailsInputFields {
+    font-size: 14px;
+  }
+
+  .shippingDetailsSubmit {
+    font-size: 14px;
+  }
+  .shippingDetailsHeading {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .shippingDetailsHeading {
+    font-size: 24px;
+  }
+  .shippingDetailsInnerDiv {
+    width: 330px;
+  }
+  .shippingDetailsLine {
+    width: 30px;
+  }
+  .shippingDetailsIcon {
+    width: 90px;
+  }
+  .shippingDetailsHeadline {
+    font-size: 10px;
+  }
+  .shippingDetailsInputFields {
+    font-size: 12px;
+  }
+
+  .shippingDetailsSubmit {
+    font-size: 12px;
+  }
+  .shippingDetailsHeading {
+    font-size: 24px;
+  }
+}

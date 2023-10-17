@@ -1,0 +1,80 @@
+.contactOuterDiv {
+  height: 100vh;
+  padding-top: 80px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contactInnerDiv {
+  width: 520px;
+}
+.contactHeading {
+  text-align: center;
+  padding-bottom: 10px;
+}
+.contactPara {
+  text-align: center;
+}
+.contactForm {
+  display: flex;
+  justify-content: center;
+}
+.contactInputFields {
+  padding: 10px 20px;
+  border: 2px solid #c6c6c6;
+  border-radius: 10px;
+  width: 240px;
+  outline: none;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+::placeholder {
+  color: #c6c6c6;
+}
+.contactTextArea {
+  resize: none;
+}
+.contactSubmit {
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background-color: #ffafaf;
+  width: 284px;
+  font-size: 16px;
+  padding: 12px 0px;
+}
+.contactSubmit:hover {
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .contactInnerDiv {
+    width: 330px;
+  }
+  .contactPara {
+    font-size: 14px;
+  }
+  .contactHeading {
+    font-size: 28px;
+  }
+  .contactInputFields {
+    font-size: 14px;
+  }
+  .contactSubmit {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .contactHeading {
+    font-size: 24px;
+  }
+  .contactPara {
+    font-size: 12px;
+  }
+  .contactInputFields {
+    font-size: 12px;
+  }
+  .contactSubmit {
+    font-size: 12px;
+  }
+}
