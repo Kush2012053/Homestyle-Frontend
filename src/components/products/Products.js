@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./Products.css";
 
 const Products = () => {
   const [data, setData] = useState([]);
@@ -37,35 +38,48 @@ const Products = () => {
   };
   return (
     <>
+      <div className="searchBarDiv">
       <form>
         <input
-          type="text"
-          name="search"
-          value={searchValue}
-          onChange={inputHandler}
+           type="text"
+           name="search"
+           value={searchValue}
+           onChange={inputHandler}
+           placeholder="Search by name or category..."
+           className="productSearchBar"
         />
       </form>
+      </div>
+      <div className="productsOuterDiv">
       {data.map((obj) => {
         return (
           <>
-            <div>
-              <img
-                src={obj.imageUrl}
-                alt=""
-                height="100px"
-                width="100px"
-                onClick={() => {
+            <div className="productsBoxMainOuter">
+          <div className="productsBoxOuter">
+            <div className="productsBoxInner">
+              <div className="productsImgOuter">
+                <div className="productsImgInner" onClick={() => {
                   goToOneProductPage(obj._id);
-                }}
-              />
-              <h3>{obj.name}</h3>
-              <h4>{obj.category}</h4>
-              <h5>{obj.price}</h5>
-              <hr />
+                }}>
+                  <img src={obj.imageUrl} height="100%" width="100%" />
+                </div>
+              </div>
+              <div className="productsTop">
+                <p className="productsPara">{obj.name}</p>
+              </div>
+              <div className="productsMiddle">
+                <p className="productsPara">{obj.category}</p>
+              </div>
+              <div className="productsBottom">
+                <p className="productsPara">&#8377; {obj.price}</p>
+              </div>
             </div>
+          </div>
+        </div>
           </>
         );
-      })}
+      })} 
+      </div>
     </>
   );
 };

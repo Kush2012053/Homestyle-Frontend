@@ -1,0 +1,130 @@
+.searchBarDiv {
+    width: 100%;
+    height: 80px;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.productSearchBar {
+    padding: 10px 20px;
+    border: 2px solid #c6c6c6;
+    border-radius: 10px;
+    width: 600px;
+    outline: none;
+    font-size: 16px;
+}
+::placeholder {
+    color: #c6c6c6;
+}
+.productsOuterDiv {
+    min-height: calc(100vh - 200px);
+    margin-bottom: 20px;
+}
+.productsBoxMainOuter {
+    display: inline-block;
+    width: 25%;
+    height: 300px;
+}
+.productsBoxOuter {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.productsBoxInner {
+    border: 2px solid #c6c6c6;
+    border-radius: 10px;
+    width: 220px;
+    box-sizing: border-box;
+    height: 250px;
+    padding: 20px;
+}
+.productsImgOuter {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+.productsImgInner {
+    width: 100px;
+    height: 100%;
+    font-size: 0px;
+    cursor: pointer;
+}
+.productsTop {
+    width: 100%;
+    height: 62px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+.productsMiddle {
+    width: 100%;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.productsBottom {
+    width: 100%;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.productsPara {
+    text-align: center;
+}
+@media screen and (max-width: 992px) {
+    .productsBoxMainOuter {
+        width: 33.33%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .productsBoxMainOuter {
+        width: 50%;
+    }
+    .productsPara {
+        font-size: 14px;
+    }
+    .productSearchBar {
+        width: 380px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .productsPara {
+        font-size: 12px;
+    }
+    .productsBoxInner {
+        width: 160px;
+        height: 196px;
+        padding: 16px;
+    }
+    .productsTop {
+        height: 48px;
+    }
+    .productsMiddle {
+        height: 16px;
+    }
+    .productsBottom {
+        height: 16px;
+    }
+    .productsImgOuter {
+        height: 80px;
+    }
+    .productsImgInner {
+        width: 80px;
+    }
+    .productsBoxMainOuter {
+        height: 240px;
+    }
+    .productSearchBar {   
+        width: 260px;
+        font-size: 12px;
+    }
+}
