@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import main from "../../Images/main.png";
 import logo from "../../Images/logo.png";
-import CircularProgress from "@mui/material/CircularProgress";
+import Spinner from "react-spinner-material";
 import "./SignIn.css";
 const SignIn = () => {
   const [details, setDetails] = useState({
@@ -49,9 +49,9 @@ const SignIn = () => {
     );
     const data = await res.json();
     alert(data.message);
+    setDisplay(false);
     if (data.status === 200) {
       localStorage.setItem("token", data.token);
-      setDisplay(false);
       navigate("/");
     }
   };
@@ -110,9 +110,14 @@ const SignIn = () => {
                   } else {
                     return (
                       <>
-                        <div className="signInSubmit">
-                          <CircularProgress className="signInProgress" />
-                        </div>
+                        <button style={{backgroundColor: "white", border: "none"}}>
+                        <Spinner
+                  radius={30}
+                  color={"#ffc6c6"}
+                  stroke={4}
+                  visible={true}
+                />
+                        </button>
                       </>
                     );
                   }
