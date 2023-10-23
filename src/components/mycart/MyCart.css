@@ -63,7 +63,7 @@
   width: 100%;
   padding: 12px 0px;
   text-align: center;
-  background-color: #ffafaf;
+  background-color: #ff7a7a;
   color: white;
   cursor: pointer;
   font-size: 16px;
@@ -72,10 +72,10 @@
 .myCartButtonShop {
   width: 100%;
   padding: 10px 0px;
-  border: 2px solid #ffafaf;
+  border: 2px solid #ff7a7a;
   text-align: center;
   background-color: white;
-  color: #ffafaf;
+  color: #ff7a7a;
   cursor: pointer;
   font-size: 16px;
   box-sizing: border-box;
@@ -133,7 +133,7 @@
   align-items: center;
 }
 .myCartDeleteIcon {
-  color: #ffafaf;
+  color: #ff7a7a;
   cursor: pointer;
 }
 .myCartCartItems {

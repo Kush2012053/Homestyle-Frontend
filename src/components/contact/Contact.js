@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Spinner from "react-spinner-material";
 import "./Contact.css";
 const Contact = () => {
   const [details, setDetails] = useState({
@@ -7,6 +8,7 @@ const Contact = () => {
     subject: "",
     message: "",
   });
+  const [display, setDisplay] = useState(false);
 
   useEffect(() => {
     const getUserDetailsHandler = async () => {
@@ -37,6 +39,7 @@ const Contact = () => {
 
   const sendMessageHandler = async (e) => {
     e.preventDefault();
+    setDisplay(true);
     const res = await fetch(
       "https://homestyle-ecommerce-backend.onrender.com/sendMessage",
       {
@@ -61,6 +64,7 @@ const Contact = () => {
     } else {
       alert(data.message);
     }
+    setDisplay(false);
   };
 
   const inputHandler = (e) => {
@@ -115,7 +119,30 @@ const Contact = () => {
                 rows="4"
               />
               <br />
-              <input type="submit" value="Send" className="contactSubmit" />
+              {(() => {
+                  if (!display) {
+                    return (
+                      <>
+                        <input type="submit" value="Send" className="contactSubmit" />
+                      </>
+                    );
+                  } else {
+                    return (
+                      <>
+                      <div className="contactLoaderDiv">
+                        <button style={{backgroundColor: "white", border: "none"}}>
+                        <Spinner
+                  radius={30}
+                  color={"#ff7a7a"}
+                  stroke={4}
+                  visible={true}
+                />
+                        </button>
+                        </div>
+                      </>
+                    );
+                  }
+                })()}
             </div>
           </form>
         </div>

@@ -113,7 +113,7 @@ const SignIn = () => {
                         <button style={{backgroundColor: "white", border: "none"}}>
                         <Spinner
                   radius={30}
-                  color={"#ffc6c6"}
+                  color={"#ff7a7a"}
                   stroke={4}
                   visible={true}
                 />

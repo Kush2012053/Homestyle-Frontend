@@ -10,7 +10,7 @@
   text-align: center;
 }
 .pageNotFoundHeading {
-  color: #ffafaf;
+  color: #ff7a7a;
   font-size: 96px;
 }
 .pageNotFoundPara {
@@ -24,7 +24,7 @@
 .pageNotFoundButton {
   padding: 12px 22px;
   border-radius: 10px;
-  background-color: #ffafaf;
+  background-color: #ff7a7a;
   color: white;
   border: none;
   cursor: pointer;

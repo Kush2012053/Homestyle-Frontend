@@ -57,37 +57,6 @@ const OneOrder = () => {
   }, []);
   return (
     <>
-      {/*
-      <div>
-        <h1>Order Details</h1>
-        <h4>Order Id: {details.orderId}</h4>
-        <h4>Order Date: {details.createdAt}</h4>
-        <h2>Shipping Info</h2>
-        <h4>Name: {details.fullName}</h4>
-        <h4>Phone: {details.phoneNumber}</h4>
-        <h4>
-          Address: {shippingDetails.address}, {shippingDetails.city},{" "}
-          {shippingDetails.state}, {shippingDetails.country} -{" "}
-          {shippingDetails.pincode}
-        </h4>
-        <h2>Your Order Items</h2>
-        {products.map((obj) => {
-          return (
-            <>
-              <img src={obj.imageUrl} alt="" height="50px" width="50px" />
-              <h4>{obj.name}</h4>
-              <h4>
-                {obj.quantity} * &#8377; {obj.price} = &#8377;{" "}
-                {obj.quantity * obj.price}
-              </h4>
-              <hr />
-            </>
-          );
-        })}
-        <h2>Order Summary</h2>
-        <h4>Total: &#8377;{totalPrice}</h4>
-      </div>
-      */}
       <div className="oneOrderIdOuterDiv">
         <div className="oneOrderIdInnerDiv">
           <h3 className="oneOrderInfo">Order Summary</h3>

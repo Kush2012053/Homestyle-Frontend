@@ -10,5 +10,9 @@
   background: #c6c6c6;
 }
 *::-webkit-scrollbar-thumb {
-  background-color: #ffafaf;
+  background-color: #ff7a7a;
+}
+
+#alert{
+  background-color: #ff7a7a;
 }

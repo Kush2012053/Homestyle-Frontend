@@ -8,7 +8,7 @@
 .confirmOrderLeftDiv {
   width: 60%;
   height: 100%;
-  border-right: 1px solid #cccccc;
+  border-right: 1px solid #c6c6c6;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,7 +20,7 @@
 .confirmOrderRightDiv {
   width: 40%;
   height: 100%;
-  border-left: 1px solid #cccccc;
+  border-left: 1px solid #c6c6c6;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,14 +50,14 @@
   width: 100%;
   padding: 12px 0px;
   text-align: center;
-  background-color: #ffc6c6;
+  background-color: #ff7a7a;
   color: white;
   cursor: pointer;
   font-size: 16px;
   border: none;
 }
 .confirmOrderDiv {
-  border: 1px solid #cccccc;
+  border: 1px solid #c6c6c6;
   margin-bottom: 20px;
 }
 .confirmOrderPara {
@@ -161,15 +161,19 @@
   box-sizing: border-box;
 }
 .confirmOrderBorderColor {
-  border-color: #ffc6c6;
+  border-color: #ff7a7a;
 }
 .confirmOrderHeadline {
   font-size: 14px;
 }
 .confirmOrderColor {
-  color: #ffc6c6;
+  color: #ff7a7a;
 }
-
+.confirmOrderLoaderDiv{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 @media screen and (max-width: 992px) {
   .confirmOrderLeft {
     width: 420px;

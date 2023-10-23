@@ -28,7 +28,7 @@
   width: 100%;
   height: 60px;
   display: flex;
-  background-color: #ffafaf;
+  background-color: #ff7a7a;
   color: white;
   padding-right: 4px;
   box-sizing: border-box;
@@ -37,9 +37,9 @@
   width: 100%;
   height: 60px;
   display: flex;
-  border-bottom: 2px solid #ffafaf;
-  border-left: 2px solid #ffafaf;
-  border-right: 2px solid #ffafaf;
+  border-bottom: 2px solid #ff7a7a;
+  border-left: 2px solid #ff7a7a;
+  border-right: 2px solid #ff7a7a;
   box-sizing: border-box;
 }
 .myOrdersInnerDiv {

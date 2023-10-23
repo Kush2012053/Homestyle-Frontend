@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import Spinner from "react-spinner-material";
 import main from "../../Images/main.png";
 import logo from "../../Images/logo.png";
 import "./SignUp.css";
@@ -12,6 +13,7 @@ const SignUp = () => {
     password: "",
     confirmPassword: "",
   });
+  const [display, setDisplay] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -38,6 +40,7 @@ const SignUp = () => {
 
   const signUpHandler = async (e) => {
     e.preventDefault();
+    setDisplay(true);
     const res = await fetch(
       "https://homestyle-ecommerce-backend.onrender.com/signUp",
       {
@@ -50,6 +53,7 @@ const SignUp = () => {
     );
     const data = await res.json();
     alert(data.message);
+    setDisplay(false);
     if (data.status === 200) {
       navigate("/signin");
     }
@@ -122,7 +126,28 @@ const SignUp = () => {
                 />
                 <br />
                 <br />
-                <input type="submit" value="Sign Up" className="signUpSubmit" />
+                {(() => {
+                  if (!display) {
+                    return (
+                      <>
+                        <input type="submit" value="Sign Up" className="signUpSubmit" />
+                      </>
+                    );
+                  } else {
+                    return (
+                      <>
+                        <button style={{backgroundColor: "white", border: "none"}}>
+                        <Spinner
+                  radius={30}
+                  color={"#ff7a7a"}
+                  stroke={4}
+                  visible={true}
+                />
+                        </button>
+                      </>
+                    );
+                  }
+                })()}
               </form>
             </div>
           </div>

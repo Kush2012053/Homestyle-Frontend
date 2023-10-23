@@ -39,13 +39,18 @@
   border: none;
   border-radius: 10px;
   color: white;
-  background-color: #ffafaf;
+  background-color: #ff7a7a;
   width: 284px;
   font-size: 16px;
   padding: 12px 0px;
 }
 .contactSubmit:hover {
   cursor: pointer;
+}
+.contactLoaderDiv{
+  width: 284;
+  display: flex;
+  justify-content: center;
 }
 @media screen and (max-width: 768px) {
   .contactInnerDiv {

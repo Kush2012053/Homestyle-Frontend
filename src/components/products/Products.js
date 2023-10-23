@@ -50,7 +50,11 @@ const Products = () => {
         />
       </form>
       </div>
-      <div className="productsOuterDiv">
+      {(()=>{
+        if(data.length !== 0) {
+          return(
+            <>
+            <div className="productsOuterDiv">
       {data.map((obj) => {
         return (
           <>
@@ -80,6 +84,21 @@ const Products = () => {
         );
       })} 
       </div>
+            </>
+          );
+        }
+        else {
+          return (
+            <>
+              <div className="productsEmptyDiv">
+                <h1 className="productsEmptyHeading">
+                  No product found with the name and category specified!
+                </h1>
+              </div>
+            </>
+          );
+        }
+      })()}      
     </>
   );
 };

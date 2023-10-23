@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import LibraryAddCheckIcon from "@mui/icons-material/LibraryAddCheck";
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
+import Spinner from "react-spinner-material";
 import "./ShippingDetails.css";
 
 const ShippingDetails = () => {
@@ -14,6 +15,7 @@ const ShippingDetails = () => {
     country: "",
     state: "",
   });
+  const [display, setDisplay] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -63,6 +65,7 @@ const ShippingDetails = () => {
 
   const storeShippingDetailsHandler = async (e) => {
     e.preventDefault();
+    setDisplay(true);
     const res = await fetch(
       "https://homestyle-ecommerce-backend.onrender.com/storeShippingDetails",
       {
@@ -76,9 +79,11 @@ const ShippingDetails = () => {
     );
     const data = await res.json();
     if (data.status === 200) {
+      setDisplay(false);
       navigate("/confirmorder");
     } else {
       alert(data.message);
+      setDisplay(false);
     }
   };
 
@@ -92,7 +97,7 @@ const ShippingDetails = () => {
           <div className="shippingDetailsIcon">
             <div className="shippingDetailsCommon">
               <LocalShippingIcon
-                style={{ fontSize: "26px", color: "#ffc6c6" }}
+                style={{ fontSize: "26px", color: "#ff7a7a" }}
               />
             </div>
             <div className="shippingDetailsCommonUpper">
@@ -192,11 +197,34 @@ const ShippingDetails = () => {
             />
             <br />
             <br />
-            <input
+            {(() => {
+                  if (!display) {
+                    return (
+                      <>
+                        <input
               type="submit"
               value="Continue"
               className="shippingDetailsSubmit"
             />
+                      </>
+                    );
+                  } else {
+                    return (
+                      <>
+                      <div className="shippingDetailsLoaderDiv">
+                        <button style={{backgroundColor: "white", border: "none"}}>
+                        <Spinner
+                  radius={30}
+                  color={"#ff7a7a"}
+                  stroke={4}
+                  visible={true}
+                />
+                        </button>
+                        </div>
+                      </>
+                    );
+                  }
+                })()}
           </form>
         </div>
       </div>

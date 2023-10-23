@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import LibraryAddCheckIcon from "@mui/icons-material/LibraryAddCheck";
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
+import Spinner from "react-spinner-material";
 import "./ConfirmOrder.css";
 
 const ConfirmOrder = () => {
@@ -10,6 +11,7 @@ const ConfirmOrder = () => {
   const [products, setProducts] = useState([]);
   const [shippingDetails, setShippingDetails] = useState({});
   const [totalPrice, setTotalPrice] = useState(0);
+  const [display, setDisplay] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -59,6 +61,7 @@ const ConfirmOrder = () => {
   }, []);
 
   const checkoutHandler = async () => {
+    setDisplay(true);
     const response = await fetch(
       "https://homestyle-ecommerce-backend.onrender.com/getKey",
       {
@@ -86,6 +89,7 @@ const ConfirmOrder = () => {
     if (data.status === 500) {
       alert(data.message);
     }
+    setDisplay(false);
 
     var options = {
       key: data_response.key,
@@ -134,7 +138,7 @@ const ConfirmOrder = () => {
           <div className="confirmOrderIcon">
             <div className="confirmOrderCommon">
               <LocalShippingIcon
-                style={{ fontSize: "26px", color: "#ffc6c6" }}
+                style={{ fontSize: "26px", color: "#ff7a7a" }}
               />
             </div>
             <div className="confirmOrderCommonUpper">
@@ -150,7 +154,7 @@ const ConfirmOrder = () => {
           <div className="confirmOrderIcon">
             <div className="confirmOrderCommon">
               <LibraryAddCheckIcon
-                style={{ fontSize: "26px", color: "#ffc6c6" }}
+                style={{ fontSize: "26px", color: "#ff7a7a" }}
               />
             </div>
             <div className="confirmOrderCommonUpper">
@@ -247,9 +251,32 @@ const ConfirmOrder = () => {
               </div>
             </div>
             <div className="confirmOrderButtonDiv">
-              <button className="confirmOrderButton" onClick={checkoutHandler}>
+            {(() => {
+                  if (!display) {
+                    return (
+                      <>
+                        <button className="confirmOrderButton" onClick={checkoutHandler}>
                 Proceed To Payment
               </button>
+                      </>
+                    );
+                  } else {
+                    return (
+                      <>
+                      <div className="confirmOrderLoaderDiv">
+                        <button style={{backgroundColor: "white", border: "none"}}>
+                        <Spinner
+                  radius={30}
+                  color={"#ff7a7a"}
+                  stroke={4}
+                  visible={true}
+                />
+                        </button>
+                        </div>
+                      </>
+                    );
+                  }
+                })()}
             </div>
           </div>
         </div>

@@ -9,20 +9,20 @@
 }
 .shippingDetailsInputFields {
   padding: 10px 20px;
-  border: 2px solid #cccccc;
+  border: 2px solid #c6c6c6;
   border-radius: 10px;
   width: 240px;
   outline: none;
   font-size: 16px;
 }
 ::placeholder {
-  color: #cccccc;
+  color: #c6c6c6;
 }
 .shippingDetailsSubmit {
   border: none;
   border-radius: 10px;
   color: white;
-  background-color: #ffc6c6;
+  background-color: #ff7a7a;
   width: 284px;
   padding: 12px 0px;
   font-size: 16px;
@@ -80,7 +80,12 @@
   font-size: 14px;
 }
 .shippingDetailsColor {
-  color: #ffc6c6;
+  color: #ff7a7a;
+}
+.shippingDetailsLoaderDiv{
+  width: 284;
+  display: flex;
+  justify-content: center;
 }
 @media screen and (max-width: 768px) {
   .shippingDetailsInnerDiv {

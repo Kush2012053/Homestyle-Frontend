@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Spinner from "react-spinner-material";
 import "./EditProfile.css";
 
 const EditProfile = () => {
@@ -8,6 +9,7 @@ const EditProfile = () => {
     email: "",
     phoneNumber: "",
   });
+  const [display, setDisplay] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -59,6 +61,7 @@ const EditProfile = () => {
 
   const updateProfileHandler = async (e) => {
     e.preventDefault();
+    setDisplay(true);
     const res = await fetch(
       "https://homestyle-ecommerce-backend.onrender.com/updateProfile",
       {
@@ -72,6 +75,7 @@ const EditProfile = () => {
     );
     const data = await res.json();
     alert(data.message);
+    setDisplay(false);
   };
 
   const inputHandler = (e) => {
@@ -115,11 +119,34 @@ const EditProfile = () => {
               />
               <br />
               <br />
-              <input
+              {(() => {
+                  if (!display) {
+                    return (
+                      <>
+                        <input
                 type="submit"
                 value="Update"
                 className="editProfileSubmit"
               />
+                      </>
+                    );
+                  } else {
+                    return (
+                      <>
+                      <div className="editProfileLoaderDiv">
+                        <button style={{backgroundColor: "white", border: "none"}}>
+                        <Spinner
+                  radius={30}
+                  color={"#ff7a7a"}
+                  stroke={4}
+                  visible={true}
+                />
+                        </button>
+                        </div>
+                      </>
+                    );
+                  }
+                })()}
             </div>
           </form>
         </div>

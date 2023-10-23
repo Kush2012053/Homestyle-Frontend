@@ -29,7 +29,7 @@
   align-items: center;
 }
 .signUpHeading {
-  color: #ffafaf;
+  color: #ff7a7a;
   padding-bottom: 40px;
 }
 .signUpInputFields {
@@ -47,10 +47,10 @@
   padding: 10px 20px;
   border: none;
   border-radius: 10px;
-  border: 2px solid #ffafaf;
+  border: 2px solid #ff7a7a;
   color: white;
   font-size: 16px;
-  background-color: #ffafaf;
+  background-color: #ff7a7a;
 }
 .signUpSubmit:hover {
   cursor: pointer;

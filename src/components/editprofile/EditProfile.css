@@ -33,13 +33,18 @@
   border: none;
   border-radius: 10px;
   color: white;
-  background-color: #ffafaf;
+  background-color: #ff7a7a;
   width: 284px;
   padding: 12px 0px;
   font-size: 16px;
 }
 .editProfileSubmit:hover {
   cursor: pointer;
+}
+.editProfileLoaderDiv{
+  width: 284;
+  display: flex;
+  justify-content: center;
 }
 @media screen and (max-width: 768px) {
   .editProfileInnerDiv {

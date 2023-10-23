@@ -14,7 +14,7 @@
   justify-content: center;
 }
 .homeSpan {
-  color: #ffafaf;
+  color: #ff7a7a;
 }
 .homeBuyNowOuter {
   display: flex;
@@ -22,7 +22,7 @@
 }
 .homeBuyNowInner {
   width: 120px;
-  background-color: #ffafaf;
+  background-color: #ff7a7a;
   color: white;
   padding: 12px 22px;
   border-radius: 50px;

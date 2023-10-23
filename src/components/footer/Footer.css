@@ -1,0 +1,80 @@
+.footerImageOuterDiv{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0px 20px;
+}
+.footerImageInnerDiv{
+    width: 150px;
+  height: 30px;
+  font-size: 0px;
+}
+.footerParaOuterDiv{
+    padding: 0px 200px;
+}
+.footerParaInnerDiv{
+    text-align: center;
+    font-size: 14px;
+    color: white;
+}
+.footerNavbarOuter{
+    padding: 20px 0px;
+    width: 100%;
+    display: flex;
+}
+.footerNavbarInner{
+    width: 25%;
+    display: flex;
+    justify-content: center;color: white;
+}
+.footerNavbarNavLink {
+    text-decoration: none;
+    color: white;
+  }
+.footerNavbarPara{
+    font-size: 14px;
+}
+.active{
+    color: #ff7a7a;
+}
+.footerCopyRight{
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    padding-bottom: 40px;
+}
+@media screen and (max-width: 992px) {
+    .footerParaOuterDiv{
+        padding: 0px 150px 20px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .footerParaOuterDiv{
+        padding: 0px 100px 20px;
+    }
+    .footerParaInnerDiv{
+        
+        font-size: 12px;
+    }
+    .footerNavbarPara{
+        font-size: 12px;
+    }
+    .footerCopyRight{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .footerParaOuterDiv{
+        padding: 0px 50px 20px;
+    }
+    .footerParaInnerDiv{
+        
+        font-size: 10px;
+    }
+    .footerNavbarPara{
+        font-size: 10px;
+    }
+    .footerCopyRight{
+        font-size: 10px;
+    }
+}
