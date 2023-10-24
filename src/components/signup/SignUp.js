@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import Spinner from "react-spinner-material";
 import main from "../../Images/main.png";
 import logo from "../../Images/logo.png";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./SignUp.css";
 
 const SignUp = () => {
@@ -32,7 +34,20 @@ const SignUp = () => {
       if (data.status === 200) {
         navigate("/");
       } else if (data.status === 500) {
-        alert(data.message);
+        toast(data.message, {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          style: {
+            backgroundColor: "#ff9b9b",
+            color: "white",
+          },
+        });
       }
     };
     checkSignIn();
@@ -52,7 +67,20 @@ const SignUp = () => {
       }
     );
     const data = await res.json();
-    alert(data.message);
+    toast(data.message, {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      style: {
+        backgroundColor: "#ff9b9b",
+        color: "white",
+      },
+    });
     setDisplay(false);
     if (data.status === 200) {
       navigate("/signin");
@@ -139,7 +167,7 @@ const SignUp = () => {
                         <button style={{backgroundColor: "white", border: "none"}}>
                         <Spinner
                   radius={30}
-                  color={"#ff7a7a"}
+                  color={"#ff9b9b"}
                   stroke={4}
                   visible={true}
                 />
@@ -156,6 +184,7 @@ const SignUp = () => {
           <img src={main} height="100%" width="100%" />
         </div>
       </div>
+      <ToastContainer />
     </>
   );
 };

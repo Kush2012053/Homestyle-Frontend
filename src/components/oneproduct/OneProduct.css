@@ -66,11 +66,11 @@
 }
 .oneProductIconColor {
   font-size: 32px;
-  color: #ff7a7a;
+  color: #ff7b7b;
   cursor: pointer;
 }
 .oneProductAdd {
-  background-color: #ff7a7a;
+  background-color: #ff7b7b;
   color: white;
   margin-left: 40px;
   padding: 12px 22px;
@@ -80,6 +80,8 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  border: none;
+  font-size: 16px;
 }
 
 @media screen and (max-width: 992px) {
@@ -120,8 +122,6 @@
   .oneProductAdd {
     margin-left: 30px;
     padding: 6px 11px;
-  }
-  .oneProductAddToCart {
     font-size: 14px;
   }
   .oneProductIcon {
@@ -160,7 +160,7 @@
   .oneProduct {
     height: 30px;
   }
-  .oneProductAddToCart {
+  .oneProductAdd {
     font-size: 12px;
   }
 }

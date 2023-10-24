@@ -83,13 +83,13 @@
 }
 .navbarSignInButton {
   padding: 10px 20px;
-  border: 2px solid #ff7a7a;
+  border: 2px solid #ff7b7b;
   background-color: white;
   font-size: 16px;
   cursor: pointer;
 }
 .navbarSignInLink {
-  color: #ff7a7a;
+  color: #ff7b7b;
   text-decoration: none;
 }
 .navbarNavLink {
@@ -97,10 +97,10 @@
   color: black;
 }
 .active {
-  color: #ff7a7a;
+  color: #ff7b7b;
 }
 .navbarIconcolor {
-  color: #ff7a7a;
+  color: #ff7b7b;
   cursor: pointer;
 }
 @media screen and (max-width: 768px) {

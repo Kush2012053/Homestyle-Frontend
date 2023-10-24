@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./OneOrder.css";
 
 const OneOrder = () => {
@@ -29,7 +31,20 @@ const OneOrder = () => {
         setShippingDetails(data.data.shippingDetails);
         setTotalPrice(data.data.cartDetails.totalPrice);
       } else {
-        alert(data.message);
+        toast(data.message, {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          style: {
+            backgroundColor: "#ff9b9b",
+            color: "white",
+          },
+        });
       }
     };
 
@@ -50,7 +65,20 @@ const OneOrder = () => {
       } else if (data.status === 401) {
         navigate("/");
       } else {
-        alert(data.message);
+        toast(data.message, {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          style: {
+            backgroundColor: "#ff9b9b",
+            color: "white",
+          },
+        });
       }
     };
     checkSignIn();
@@ -143,6 +171,7 @@ const OneOrder = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </>
   );
 };

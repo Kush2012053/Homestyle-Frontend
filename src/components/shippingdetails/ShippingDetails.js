@@ -4,6 +4,8 @@ import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import LibraryAddCheckIcon from "@mui/icons-material/LibraryAddCheck";
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import Spinner from "react-spinner-material";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./ShippingDetails.css";
 
 const ShippingDetails = () => {
@@ -36,7 +38,20 @@ const ShippingDetails = () => {
           setDetails(data.data.shippingDetails[0]);
         }
       } else {
-        alert(data.message);
+        toast(data.message, {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          style: {
+            backgroundColor: "#ff9b9b",
+            color: "white",
+          },
+        });
       }
     };
 
@@ -57,7 +72,20 @@ const ShippingDetails = () => {
       } else if (data.status === 401) {
         navigate("/");
       } else {
-        alert(data.message);
+        toast(data.message, {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          style: {
+            backgroundColor: "#ff9b9b",
+            color: "white",
+          },
+        });
       }
     };
     checkSignIn();
@@ -82,7 +110,20 @@ const ShippingDetails = () => {
       setDisplay(false);
       navigate("/confirmorder");
     } else {
-      alert(data.message);
+      toast(data.message, {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        style: {
+          backgroundColor: "#ff9b9b",
+          color: "white",
+        },
+      });
       setDisplay(false);
     }
   };
@@ -97,7 +138,7 @@ const ShippingDetails = () => {
           <div className="shippingDetailsIcon">
             <div className="shippingDetailsCommon">
               <LocalShippingIcon
-                style={{ fontSize: "26px", color: "#ff7a7a" }}
+                style={{ fontSize: "26px", color: "#ff9b9b" }}
               />
             </div>
             <div className="shippingDetailsCommonUpper">
@@ -215,7 +256,7 @@ const ShippingDetails = () => {
                         <button style={{backgroundColor: "white", border: "none"}}>
                         <Spinner
                   radius={30}
-                  color={"#ff7a7a"}
+                  color={"#ff9b9b"}
                   stroke={4}
                   visible={true}
                 />
@@ -228,6 +269,7 @@ const ShippingDetails = () => {
           </form>
         </div>
       </div>
+      <ToastContainer />
     </>
   );
 };

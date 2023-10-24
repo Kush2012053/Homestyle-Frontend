@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Spinner from "react-spinner-material";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./Contact.css";
 const Contact = () => {
   const [details, setDetails] = useState({
@@ -31,7 +33,20 @@ const Contact = () => {
         });
       }
       if (data.status === 500) {
-        alert(data.message);
+        toast(data.message, {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          style: {
+            backgroundColor: "#ff9b9b",
+            color: "white",
+          },
+        });
       }
     };
     getUserDetailsHandler();
@@ -53,16 +68,55 @@ const Contact = () => {
     );
     const data = await res.json();
     if (data.status === 200) {
-      alert(data.message);
+      toast(data.message, {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        style: {
+          backgroundColor: "#ff9b9b",
+          color: "white",
+        },
+      });
       setDetails({
         ...details,
         subject: "",
         message: "",
       });
     } else if (data.status === 401) {
-      alert("Please sign in before sending your message!");
+      toast("Please sign in before sending your message!", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        style: {
+          backgroundColor: "#ff9b9b",
+          color: "white",
+        },
+      });
     } else {
-      alert(data.message);
+      toast(data.message, {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        style: {
+          backgroundColor: "#ff9b9b",
+          color: "white",
+        },
+      });
     }
     setDisplay(false);
   };
@@ -133,7 +187,7 @@ const Contact = () => {
                         <button style={{backgroundColor: "white", border: "none"}}>
                         <Spinner
                   radius={30}
-                  color={"#ff7a7a"}
+                  color={"#ff9b9b"}
                   stroke={4}
                   visible={true}
                 />
@@ -147,6 +201,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
+      <ToastContainer />
     </>
   );
 };

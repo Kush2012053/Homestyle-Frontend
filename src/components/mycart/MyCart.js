@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import DeleteIcon from "@mui/icons-material/Delete";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./MyCart.css";
 const MyCart = () => {
   const [data, setData] = useState([]);
@@ -25,7 +27,20 @@ const MyCart = () => {
         setData(data.data.cartDetails.products);
         setTotal(data.data.cartDetails.totalPrice);
       } else {
-        alert(data.message);
+        toast(data.message, {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          style: {
+            backgroundColor: "#ff9b9b",
+            color: "white",
+          },
+        });
       }
     };
 
@@ -46,7 +61,20 @@ const MyCart = () => {
       } else if (data.status === 401) {
         navigate("/");
       } else {
-        alert(data.message);
+        toast(data.message, {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          style: {
+            backgroundColor: "#ff9b9b",
+            color: "white",
+          },
+        });
       }
     };
     checkSignIn();
@@ -71,7 +99,20 @@ const MyCart = () => {
     if (data.status === 200) {
       setRemove(!remove);
     } else {
-      alert(data.message);
+      toast(data.message, {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        style: {
+          backgroundColor: "#ff9b9b",
+          color: "white",
+        },
+      });
     }
   };
 
@@ -209,6 +250,7 @@ const MyCart = () => {
           );
         }
       })()}
+      <ToastContainer />
     </>
   );
 };

@@ -22,7 +22,7 @@
   border: none;
   border-radius: 10px;
   color: white;
-  background-color: #ff7a7a;
+  background-color: #ff7b7b;
   width: 284px;
   padding: 12px 0px;
   font-size: 16px;
@@ -80,7 +80,7 @@
   font-size: 14px;
 }
 .shippingDetailsColor {
-  color: #ff7a7a;
+  color: #ff7b7b;
 }
 .shippingDetailsLoaderDiv{
   width: 284;

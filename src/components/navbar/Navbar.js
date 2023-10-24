@@ -5,6 +5,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import CloseIcon from "@mui/icons-material/Close";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -26,7 +28,20 @@ const Navbar = () => {
       if (data.status === 200) {
         setState(true);
       } else if (data.status === 500) {
-        alert(data.message);
+        toast(data.message, {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          style: {
+            backgroundColor: "#ff9b9b",
+            color: "white",
+          },
+        });
       }
     };
     checkSignIn();
@@ -189,6 +204,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </>
   );
 };

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import BorderColorIcon from "@mui/icons-material/BorderColor";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./MyProfile.css";
 
 const MyProfile = () => {
@@ -31,7 +33,20 @@ const MyProfile = () => {
           phoneNumber: data.data.phoneNumber,
         });
       } else {
-        alert(data.message);
+        toast(data.message, {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          style: {
+            backgroundColor: "#ff9b9b",
+            color: "white",
+          },
+        });
       }
     };
 
@@ -52,7 +67,20 @@ const MyProfile = () => {
       } else if (data.status === 401) {
         navigate("/");
       } else {
-        alert(data.message);
+        toast(data.message, {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          style: {
+            backgroundColor: "#ff9b9b",
+            color: "white",
+          },
+        });
       }
     };
     checkSignIn();
@@ -111,6 +139,7 @@ const MyProfile = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </>
   );
 };

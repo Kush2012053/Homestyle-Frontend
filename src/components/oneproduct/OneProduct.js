@@ -2,10 +2,14 @@ import React, { useEffect, useState } from "react";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import RemoveCircleIcon from "@mui/icons-material/RemoveCircle";
 import { useLocation } from "react-router-dom";
+import Spinner from "react-spinner-material";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./OneProduct.css";
 const OneProduct = () => {
   const [details, setDetails] = useState({});
   const [quantity, setQuantity] = useState(1);
+  const [display, setDisplay] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -35,6 +39,7 @@ const OneProduct = () => {
   };
 
   const addProductToCartHandler = async () => {
+    setDisplay(true);
     const res = await fetch(
       "https://homestyle-ecommerce-backend.onrender.com/addProductToCart",
       {
@@ -57,10 +62,37 @@ const OneProduct = () => {
     );
     const data = await res.json();
     if (data.status === 401) {
-      alert("Please sign in to your account before adding items to your cart!");
+      toast("Please sign in to your account before adding items to your cart!", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        style: {
+          backgroundColor: "#ff9b9b",
+          color: "white",
+        },
+      });
     } else {
-      alert(data.message);
+      toast(data.message, {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        style: {
+          backgroundColor: "#ff9b9b",
+          color: "white",
+        },
+      });
     }
+    setDisplay(false);
   };
   return (
     <>
@@ -94,9 +126,9 @@ const OneProduct = () => {
                   onClick={increaseQuantity}
                 />
               </div>
-              <div className="oneProductAdd" onClick={addProductToCartHandler}>
-                <p className="oneProductAddToCart">Add To Cart</p>
-              </div>
+              <button className="oneProductAdd" onClick={addProductToCartHandler}>
+                Add To Cart
+              </button>
             </div>
             <h4 className="oneProductHeading">{details.status}</h4>
             <h4 className="oneProductDescriptionHeading">Description:</h4>
@@ -106,6 +138,7 @@ const OneProduct = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </>
   );
 };

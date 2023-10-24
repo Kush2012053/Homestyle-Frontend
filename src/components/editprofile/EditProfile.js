@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Spinner from "react-spinner-material";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./EditProfile.css";
 
 const EditProfile = () => {
@@ -32,7 +34,20 @@ const EditProfile = () => {
           phoneNumber: data.data.phoneNumber,
         });
       } else {
-        alert(data.message);
+        toast(data.message, {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          style: {
+            backgroundColor: "#ff9b9b",
+            color: "white",
+          },
+        });
       }
     };
 
@@ -53,7 +68,20 @@ const EditProfile = () => {
       } else if (data.status === 401) {
         navigate("/");
       } else {
-        alert(data.message);
+        toast(data.message, {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          style: {
+            backgroundColor: "#ff9b9b",
+            color: "white",
+          },
+        });
       }
     };
     checkSignIn();
@@ -74,7 +102,20 @@ const EditProfile = () => {
       }
     );
     const data = await res.json();
-    alert(data.message);
+    toast(data.message, {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      style: {
+        backgroundColor: "#ff9b9b",
+        color: "white",
+      },
+    });
     setDisplay(false);
   };
 
@@ -137,7 +178,7 @@ const EditProfile = () => {
                         <button style={{backgroundColor: "white", border: "none"}}>
                         <Spinner
                   radius={30}
-                  color={"#ff7a7a"}
+                  color={"#ff9b9b"}
                   stroke={4}
                   visible={true}
                 />
@@ -151,6 +192,7 @@ const EditProfile = () => {
           </form>
         </div>
       </div>
+      <ToastContainer />
     </>
   );
 };

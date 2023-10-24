@@ -29,7 +29,7 @@
 }
 .signInHeading {
   padding-bottom: 40px;
-  color: #ff7a7a;
+  color: #ff7b7b;
 }
 .signInInputFields {
   padding: 10px 20px;
@@ -47,7 +47,7 @@
   border: none;
   border-radius: 10px;
   color: white;
-  background-color: #ff7a7a;
+  background-color: #ff7b7b;
   font-size: 16px;
 }
 
@@ -102,7 +102,7 @@
   justify-content: center;
 }
 .signInHrInner {
-  border-top: 1px solid #ff7a7a;
+  border-top: 1px solid #ff7b7b;
   width: 80px;
 }
 .signInSubDiv2 {
