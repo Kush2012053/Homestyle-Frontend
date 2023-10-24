@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Spinner from "react-spinner-material";
 import main from "../../Images/main.png";
-import logo from "../../Images/logo.png";
+import logo from "../../Images/navbar_logo.png";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./SignUp.css";
